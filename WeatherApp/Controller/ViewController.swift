@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         temperatureLabel.text = ""
         weatherLabel.text = ""
         getWeather()
+//        didGetWeather(weather: <#T##Weather#>)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,7 +84,9 @@ class ViewController: UIViewController {
                                     
                                     // fixed weather from not showing up by using dispatch
                                     DispatchQueue.main.sync(execute: {
-                                        self.temperatureLabel.text = String(temp)
+                                        self.temperatureLabel.text = "\(Int((temp - 273.15) * 1.8 + 32))°"
+                                        
+//                                        (temperature - 273.15) * 1.8 + 32
                                     })
                                     
                                    
