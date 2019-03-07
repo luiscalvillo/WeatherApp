@@ -16,9 +16,7 @@ import CoreLocation
 
 class SettingsViewController: UITableViewController, CLLocationManagerDelegate {
     
-    //var currentLocation = "San-diego"
     var settingsArray = ["Units: Fº/Cº", "Use Location"]
-    
     
     let manager = CLLocationManager()
 
