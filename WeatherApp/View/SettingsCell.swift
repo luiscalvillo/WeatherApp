@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingsCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var currentLocationSwitch: UISwitch!
     

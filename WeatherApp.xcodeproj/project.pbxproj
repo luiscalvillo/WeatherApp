@@ -46,6 +46,8 @@
 		A8057277223097160051E184 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A8F9FD201EE54C7A00E27DF4 /* SettingsViewController.swift */,
+				A87B39BD1ED1698F00BEFA4A /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -53,6 +55,7 @@
 		A8057278223097210051E184 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A8F9FD221EE68F1C00E27DF4 /* SettingsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -61,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F9FD1A1EE538E300E27DF4 /* GetWeather.swift */,
+				A8F9FD181EE3EE8400E27DF4 /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,14 +88,10 @@
 		A87B39BA1ED1698F00BEFA4A /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				A87B39BB1ED1698F00BEFA4A /* AppDelegate.swift */,
 				A8057279223097280051E184 /* Model */,
 				A8057278223097210051E184 /* View */,
 				A8057277223097160051E184 /* Controller */,
-				A87B39BB1ED1698F00BEFA4A /* AppDelegate.swift */,
-				A87B39BD1ED1698F00BEFA4A /* ViewController.swift */,
-				A8F9FD201EE54C7A00E27DF4 /* SettingsViewController.swift */,
-				A8F9FD221EE68F1C00E27DF4 /* SettingsCell.swift */,
-				A8F9FD181EE3EE8400E27DF4 /* Weather.swift */,
 				A87B39BF1ED1698F00BEFA4A /* Main.storyboard */,
 				A87B39C21ED1698F00BEFA4A /* Assets.xcassets */,
 				A87B39C41ED1698F00BEFA4A /* LaunchScreen.storyboard */,
@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					A87B39B71ED1698F00BEFA4A = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CKCH7MGXV3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -298,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CKCH7MGXV3;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luiscalvillo.WeatherApp;
@@ -310,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CKCH7MGXV3;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luiscalvillo.WeatherApp;

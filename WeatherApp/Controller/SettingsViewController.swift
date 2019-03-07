@@ -19,15 +19,12 @@ class SettingsViewController: UITableViewController, CLLocationManagerDelegate {
     //var currentLocation = "San-diego"
     var settingsArray = ["Units: Fº/Cº", "Use Location"]
     
-   
     
     let manager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-       
         
     }
 
@@ -43,8 +40,9 @@ class SettingsViewController: UITableViewController, CLLocationManagerDelegate {
                 if let placemark = placemarks?[0] {
                     var address = ""
                     if placemark.locality != nil {
-                        address += placemark.locality! + ", "
-                        location = placemark.locality!
+                        address += placemark.locality! + ", "                        
+                        location = placemark.locality!.replacingOccurrences(of: " ", with: "%20")
+                        
                     }
                     
                     if placemark.administrativeArea != nil {

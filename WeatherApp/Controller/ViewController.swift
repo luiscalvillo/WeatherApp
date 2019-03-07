@@ -15,21 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
     
-    
-
-    
     private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/weather"
     private let openWeatherMapAPIKey = "fe93902cb706356ed79462fb2658b5a4"
-   
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
        
         cityNameLabel.text = ""
         temperatureLabel.text = ""
         weatherLabel.text = ""
+        getWeather()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +37,8 @@ class ViewController: UIViewController {
     
     var currentLocation = location
     
-//cityNameTextField.text!.replacingOccurrences(of: " ", with: "%20")
+    
+//   cityNameTextField.text!.replacingOccurrences(of: " ", with: "%20")
     
     
     func didGetWeather(weather: Weather) {
