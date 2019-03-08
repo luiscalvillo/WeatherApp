@@ -9,56 +9,45 @@
 import UIKit
 import CoreLocation
 
- var location = ""
-
-//let notificationKey = "com.artoftheapp.notificationKey"
-
+//var location = ""
 
 class SettingsViewController: UITableViewController, CLLocationManagerDelegate {
     
     var settingsArray = ["Units: Fº/Cº", "Use Location"]
     
-    let manager = CLLocationManager()
+//    let manager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
     }
-
-    
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let userLocation: CLLocation = locations[0]
-        
-        CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks, error) in
-            if error != nil {
-                print(error)
-            } else {
-                if let placemark = placemarks?[0] {
-                    var address = ""
-                    if placemark.locality != nil {
-                        address += placemark.locality! + ", "                        
-                        location = placemark.locality!.replacingOccurrences(of: " ", with: "%20")
-                        
-                    }
-                    
-                    if placemark.administrativeArea != nil {
-                        address += placemark.administrativeArea!
-                    }
-                    
-                    print(placemark)
-                    
-                    //NotificationCenter.default.addObserver(self, selector: #selector(self.setLocation), name: NSNotification.Name(rawValue: notificationKey), object: nil)
-                    
-                }
-            }
-        }
-    }
-
-    
-    
-   
+//
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        let userLocation: CLLocation = locations[0]
+//        
+//        CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks, error) in
+//            if error != nil {
+//                print(error)
+//            } else {
+//                if let placemark = placemarks?[0] {
+//                    var address = ""
+//                    if placemark.locality != nil {
+//                        address += placemark.locality! + ", "                        
+//                        location = placemark.locality!.replacingOccurrences(of: " ", with: "%20")
+//                        
+//                    }
+//                    
+//                    if placemark.administrativeArea != nil {
+//                        address += placemark.administrativeArea!
+//                    }
+//                    
+//                    print(placemark)
+//                    
+//                }
+//            }
+//        }
+//    }
 
     // MARK: - Table view data source
 
@@ -82,12 +71,11 @@ class SettingsViewController: UITableViewController, CLLocationManagerDelegate {
             cell.currentLocationSwitch.isHidden = false
             
             if cell.currentLocationSwitch.isOn {
-                manager.delegate = self
-                manager.desiredAccuracy = kCLLocationAccuracyBest
-                manager.requestWhenInUseAuthorization()
-                manager.startUpdatingLocation()
-                
-               // NotificationCenter.default.addObserver(self, selector: <#T##Selector#>, name: <#T##NSNotification.Name?#>, object: <#T##Any?#>)
+//                manager.delegate = self
+//                manager.desiredAccuracy = kCLLocationAccuracyBest
+//                manager.requestWhenInUseAuthorization()
+//                manager.startUpdatingLocation()
+//                
                 
                            }
         }
